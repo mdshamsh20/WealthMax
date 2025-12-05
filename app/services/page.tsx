@@ -1,7 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';           // ✅ ADD THIS IMPORT
+import { motion, Variants } from 'framer-motion';
+import Link from 'next/link';
 import {
   ShieldCheck,
   FileText,
@@ -10,7 +10,7 @@ import {
 } from 'lucide-react';
 import Services from '@/components/Services';
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0 },
 };
