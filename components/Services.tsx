@@ -9,8 +9,15 @@ import {
   FileText,
   Building2,
 } from 'lucide-react';
+import { ComponentType, SVGProps } from 'react';
 
-const services = [
+type Service = {
+  title: string;
+  description: string;
+  icon: ComponentType<SVGProps<SVGSVGElement>>;
+};
+
+const services: Service[] = [
   // same titles/descriptions as you already have
 ];
 
