@@ -84,14 +84,14 @@ export default function ContactPage() {
         {/* Form */}
         <form
           onSubmit={handleSubmit}
-          className="bg-white rounded-3xl border border-slate-100 px-5 py-6 space-y-4 shadow-sm"
+          className="bg-white dark:bg-white rounded-3xl border border-slate-100 px-5 py-6 space-y-4 shadow-sm"
         >
           <div className="space-y-1">
             <label className="text-sm font-medium text-slate-800">Name</label>
             <input
               required
               type="text"
-              className="w-full rounded-xl border border-slate-200 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              className="w-full rounded-xl border border-slate-200 bg-white text-slate-900 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
             />
           </div>
 
@@ -100,7 +100,7 @@ export default function ContactPage() {
             <input
               required
               type="email"
-              className="w-full rounded-xl border border-slate-200 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              className="w-full rounded-xl border border-slate-200 bg-white text-slate-900 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
             />
           </div>
 
@@ -109,7 +109,7 @@ export default function ContactPage() {
             <input
               type="text"
               placeholder="Transmission, unclaimed dividends, planning, or other"
-              className="w-full rounded-xl border border-slate-200 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              className="w-full rounded-xl border border-slate-200 bg-white text-slate-900 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
             />
           </div>
 
@@ -119,7 +119,7 @@ export default function ContactPage() {
               required
               rows={4}
               placeholder="Share details like type of investment, approximate value, and time period."
-              className="w-full rounded-xl border border-slate-200 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              className="w-full rounded-xl border border-slate-200 bg-white text-slate-900 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
             />
           </div>
 

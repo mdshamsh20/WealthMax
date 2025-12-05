@@ -3,7 +3,144 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --bg-1: #f8fafc;
+    --bg-2: #eef2ff;
+    --muted: #6b7280; /* slate-500 */
+    --text: #0f172a; /* slate-900 */
+    --card: #ffffff;
+    --accent: #f59e0b; /* amber-500 */
+    --glass: rgba(255,255,255,0.65);
+  }
+
+  html.dark {
+    --bg-1: #1e293b;
+    --bg-2: #0f172a;
+    --muted: #cbd5e1; /* slate-300 */
+    --text: #f1f5f9;
+    --card: #1e293b;
+    --accent: #fbbf24; /* amber-400 */
+    --glass: rgba(15,23,42,0.7);
+  }
+
+  /* prefer dark color scheme when html has .dark */
+  html.dark, html.dark body {
+    color-scheme: dark;
+  }
+
   body {
-    @apply bg-slate-50 text-gray-900;
+    color-scheme: light;
+    @apply text-gray-900;
+    background: linear-gradient(120deg,var(--bg-1) 0%, var(--bg-2) 50%, var(--card) 100%);
+    background-size: 200% 200%;
+    animation: gradientBG 14s ease infinite;
+    color: var(--text);
+    background-attachment: fixed;
+  }
+
+  /* dark mode background with decorative pattern */
+  html.dark body {
+    background-image: 
+      radial-gradient(circle at 20% 50%, rgba(59,130,246,0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(168,85,247,0.08) 0%, transparent 50%),
+      linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #1a1f35 100%);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    animation: none;
+  }
+}
+
+@layer utilities {
+  .float-anim { animation: float 6s ease-in-out infinite; }
+  .float-anim-slow { animation: float 10s ease-in-out infinite; }
+  .spin-slow { animation: spin-slow 28s linear infinite; }
+
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-14px); }
+    100% { transform: translateY(0); }
+  }
+
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .bg-decor-grid {
+    background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+                      radial-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 24px 24px, 96px 96px;
+    background-position: 0 0, 48px 48px;
+    opacity: 0.6;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+
+  /* enhance decor grid when in dark for visibility */
+  html.dark .bg-decor-grid {
+    opacity: 0.25;
+    background-position: 0 0, 36px 36px;
+    mix-blend-mode: screen;
+    background-image: radial-gradient(rgba(71,85,105,0.06) 1px, transparent 1px),
+                      radial-gradient(rgba(71,85,105,0.03) 1px, transparent 1px);
+  }
+
+  /* site animated background gradient */
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* hero specific animated gradient / overlay */
+  .animated-hero-gradient {
+    background: radial-gradient(600px 300px at 10% 20%, rgba(14,165,233,0.12), transparent 15%),
+                radial-gradient(500px 240px at 85% 70%, rgba(124,58,237,0.12), transparent 18%),
+                linear-gradient(90deg, var(--glass), rgba(255,255,255,0.12));
+    mix-blend-mode: normal;
+    filter: blur(12px);
+    opacity: 1;
+    animation: heroFloat 10s ease-in-out infinite;
+  }
+
+  html.dark .animated-hero-gradient {
+    /* subtler overlays in dark mode using the slate-800 color */
+    background: radial-gradient(600px 300px at 10% 20%, rgba(30,41,59,0.35), transparent 18%),
+                radial-gradient(500px 240px at 85% 70%, rgba(15,23,42,0.3), transparent 20%),
+                linear-gradient(90deg, rgba(148,163,184,0.06), rgba(148,163,184,0.03));
+    filter: blur(16px) saturate(1.1);
+    opacity: 1;
+    mix-blend-mode: normal;
+  }
+
+  /* Chart path animation and theme-aware stroke */
+  .chart-path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: chartDraw 2.4s ease forwards 0.3s;
+    filter: drop-shadow(0 6px 10px rgba(2,6,23,0.08));
+    mix-blend-mode: screen;
+  }
+
+  @keyframes chartDraw {
+    to { stroke-dashoffset: 0; }
+  }
+
+  /* SVG adjustments for hero chart */
+  .hero-svg line, .hero-svg text { transition: fill .2s, stroke .2s, opacity .2s; }
+  .hero-rect { opacity: 0.08; }
+  html.dark .hero-rect { opacity: 0.04; }
+  /* use currentColor for stroke to match theme-aware color set on SVG root */
+  .hero-svg line { stroke: currentColor; stroke-opacity: 0.18; }
+  html.dark .hero-svg line { stroke-opacity: 0.12; }
+  .hero-svg text { fill: currentColor; font-size: 11px; fill-opacity: 0.75; }
+  html.dark .hero-svg text { fill-opacity: 0.75; }
+  /* tweak chart marker color (uses currentColor) */
+  .hero-svg g[fill] { fill: currentColor; }
+
+  @keyframes heroFloat {
+    0% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-8px) scale(1.02); }
+    100% { transform: translateY(0) scale(1); }
   }
 }

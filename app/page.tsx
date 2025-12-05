@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import Services from '@/components/Services';
 import Testimonials from '@/components/Testimonials';
+import Hero from '@/components/Hero';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -26,114 +27,75 @@ export default function Home() {
       transition={{ staggerChildren: 0.12 }}
       className="space-y-20 pb-8 relative"
     >
-      {/* soft background shapes */}
+      {/* soft background shapes + decorative grid */}
+      <div className="pointer-events-none fixed inset-0 -z-20">
+        <div className="absolute inset-0 bg-decor-grid -z-20" />
+      </div>
       <div className="pointer-events-none fixed inset-0 -z-10">
-        <div className="absolute -top-32 -left-10 h-72 w-72 rounded-full bg-sky-200 blur-3xl opacity-40" />
-        <div className="absolute top-40 right-0 h-80 w-80 rounded-full bg-indigo-200 blur-3xl opacity-40" />
+        <motion.div
+          animate={{ y: [0, -18, 0], x: [0, 8, 0] }}
+          transition={{ duration: 8, repeat: Infinity, repeatType: 'loop' }}
+          className="absolute -top-32 -left-10 h-72 w-72 rounded-full bg-sky-300 dark:bg-sky-700 blur-3xl opacity-40 dark:opacity-18 float-anim"
+        />
+
+        <motion.div
+          animate={{ rotate: [0, 360] }}
+          transition={{ duration: 28, repeat: Infinity, ease: 'linear' }}
+          className="absolute top-40 right-6 h-80 w-80 rounded-full bg-indigo-300 dark:bg-indigo-800 blur-3xl opacity-36 dark:opacity-16 spin-slow"
+        />
+
+        <motion.div
+          animate={{ y: [0, -10, 0] }}
+          transition={{ duration: 10, repeat: Infinity, repeatType: 'loop' }}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 h-44 w-44 rounded-2xl bg-rose-200 dark:bg-rose-700 blur-3xl opacity-28 dark:opacity-12 float-anim-slow"
+        />
       </div>
 
       {/* HERO */}
-      <motion.section
-        variants={fadeUp}
-        className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-sky-500 via-blue-600 to-indigo-700 px-6 py-12 md:px-10 md:py-16 text-white shadow-2xl"
-      >
-        <div className="absolute inset-y-0 right-0 opacity-20 pointer-events-none">
-          <div className="h-full w-72 md:w-96 bg-[radial-gradient(circle_at_top,_#ffffff66,_transparent_60%)]" />
-        </div>
-
-        <div className="relative max-w-3xl space-y-6">
-          <span className="inline-flex items-center gap-1 rounded-full bg-white/15 px-4 py-1 text-[11px] font-semibold tracking-[0.18em] uppercase">
-            <Sparkles className="h-3 w-3" />
-            Trusted investment partner
-          </span>
-
-          <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-            WealthMax Consultancy
-          </h1>
-
-          <p className="text-sm md:text-base text-blue-50 leading-relaxed">
-            WealthMax is a dedicated team of professionals with niche experience in managing
-            mutual funds, portfolio management schemes, life and general insurance, fixed
-            deposits, bonds, and recovery of unclaimed investments.
-          </p>
-
-          {/* BUTTONS -> sections */}
-          <div className="flex flex-wrap gap-3 pt-2">
-            <Link
-              href="/#contact"
-              className="inline-flex items-center rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-blue-700 shadow hover:bg-blue-50 transition"
-            >
-              Book a free consultation
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-
-            <Link
-              href="/#services"
-              className="inline-flex items-center rounded-full border border-white/60 px-5 py-2.5 text-sm font-medium text-white hover:bg-white/10 transition"
-            >
-              View our services
-            </Link>
-          </div>
-
-          <dl className="mt-6 grid grid-cols-3 gap-4 text-[11px] md:text-sm">
-            <div>
-              <dt className="text-blue-100">Years of experience</dt>
-              <dd className="font-semibold text-white">10+ years</dd>
-            </div>
-            <div>
-              <dt className="text-blue-100">Families assisted</dt>
-              <dd className="font-semibold text-white">500+ clients</dd>
-            </div>
-            <div>
-              <dt className="text-blue-100">Assets advised</dt>
-              <dd className="font-semibold text-white">Multiple crores</dd>
-            </div>
-          </dl>
-        </div>
-      </motion.section>
+      <Hero />
 
       {/* HIGHLIGHTS */}
       <motion.section
         variants={fadeUp}
         className="grid gap-6 md:grid-cols-3"
       >
-        <div className="flex items-start gap-3 rounded-2xl bg-white/90 backdrop-blur shadow-sm border border-slate-100 px-4 py-4">
-          <div className="rounded-xl bg-sky-50 p-2">
-            <ShieldCheck className="h-5 w-5 text-sky-600" />
+        <div className="flex items-start gap-3 rounded-2xl bg-white/90 dark:bg-slate-800/80 backdrop-blur shadow-sm border border-slate-100 dark:border-slate-700 px-4 py-4">
+          <div className="rounded-xl bg-sky-50 dark:bg-sky-900/30 p-2">
+            <ShieldCheck className="h-5 w-5 text-sky-600 dark:text-sky-300" />
           </div>
           <div className="space-y-1">
-            <h3 className="text-sm font-semibold text-slate-900">
+            <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">
               Regulatory‑aware guidance
             </h3>
-            <p className="text-xs text-slate-600">
+            <p className="text-xs text-slate-600 dark:text-slate-300">
               Help with IEPF, transmission, and recovery of unclaimed investments with proper documentation.
             </p>
           </div>
         </div>
 
-        <div className="flex items-start gap-3 rounded-2xl bg-white/90 backdrop-blur shadow-sm border border-slate-100 px-4 py-4">
-          <div className="rounded-xl bg-emerald-50 p-2">
-            <LineChart className="h-5 w-5 text-emerald-600" />
+        <div className="flex items-start gap-3 rounded-2xl bg-white/90 dark:bg-slate-800/80 backdrop-blur shadow-sm border border-slate-100 dark:border-slate-700 px-4 py-4">
+          <div className="rounded-xl bg-emerald-50 dark:bg-emerald-900/20 p-2">
+            <LineChart className="h-5 w-5 text-emerald-600 dark:text-emerald-300" />
           </div>
           <div className="space-y-1">
-            <h3 className="text-sm font-semibold text-slate-900">
+            <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">
               Goal‑based planning
             </h3>
-            <p className="text-xs text-slate-600">
+            <p className="text-xs text-slate-600 dark:text-slate-300">
               Portfolios aligned to major life goals instead of ad‑hoc product selection.
             </p>
           </div>
         </div>
 
-        <div className="flex items-start gap-3 rounded-2xl bg-white/90 backdrop-blur shadow-sm border border-slate-100 px-4 py-4">
-          <div className="rounded-xl bg-indigo-50 p-2">
-            <Users className="h-5 w-5 text-indigo-600" />
+        <div className="flex items-start gap-3 rounded-2xl bg-white/90 dark:bg-slate-800/80 backdrop-blur shadow-sm border border-slate-100 dark:border-slate-700 px-4 py-4">
+          <div className="rounded-xl bg-indigo-50 dark:bg-indigo-900/25 p-2">
+            <Users className="h-5 w-5 text-indigo-600 dark:text-indigo-300" />
           </div>
           <div className="space-y-1">
-            <h3 className="text-sm font-semibold text-slate-900">
+            <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">
               White‑glove support
             </h3>
-            <p className="text-xs text-slate-600">
+            <p className="text-xs text-slate-600 dark:text-slate-300">
               High‑touch assistance for families managing multiple folios, nominees, and legacy holdings.
             </p>
           </div>
@@ -143,13 +105,13 @@ export default function Home() {
       {/* ABOUT SNIPPET */}
       <motion.section
         variants={fadeUp}
-        className="rounded-3xl bg-white/90 backdrop-blur shadow-sm border border-slate-100 px-6 py-8 md:px-8 md:py-10 space-y-4"
+        className="rounded-3xl bg-white/90 dark:bg-slate-800/80 backdrop-blur shadow-sm border border-slate-100 dark:border-slate-700 px-6 py-8 md:px-8 md:py-10 space-y-4"
       >
-        <h2 className="text-xl md:text-2xl font-semibold text-slate-900 flex items-center gap-2">
+        <h2 className="text-xl md:text-2xl font-semibold text-slate-900 dark:text-slate-100 flex items-center gap-2">
           <CheckCircle2 className="h-5 w-5 text-emerald-500" />
           Built for real‑life investors
         </h2>
-        <p className="text-sm md:text-base text-slate-700 leading-relaxed">
+        <p className="text-sm md:text-base text-slate-700 dark:text-slate-300 leading-relaxed">
           Wealthmax is not just a financial services company; we are a team of passionate experts
           who understand the intricate nuances of the financial landscape. Our collective
           expertise spans mutual funds, portfolio management schemes, life and general insurance,
@@ -177,53 +139,53 @@ export default function Home() {
       {/* NEW SECTION: WHY FAMILIES CHOOSE US */}
       <motion.section
         variants={fadeUp}
-        className="rounded-3xl bg-white/95 backdrop-blur shadow-sm border border-slate-100 px-6 py-8 md:px-8 md:py-10 space-y-6"
+        className="rounded-3xl bg-white/95 dark:bg-slate-800/80 backdrop-blur shadow-sm border border-slate-100 dark:border-slate-700 px-6 py-8 md:px-8 md:py-10 space-y-6"
       >
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div className="space-y-2">
-            <p className="inline-flex items-center rounded-full bg-blue-50 px-3 py-1 text-[11px] font-semibold text-blue-700 tracking-[0.18em] uppercase">
+            <p className="inline-flex items-center rounded-full bg-blue-50 dark:bg-blue-900/30 px-3 py-1 text-[11px] font-semibold text-blue-700 dark:text-blue-300 tracking-[0.18em] uppercase">
               Why families choose us
             </p>
-            <h2 className="text-xl md:text-2xl font-semibold text-slate-900">
+            <h2 className="text-xl md:text-2xl font-semibold text-slate-900 dark:text-slate-100">
               A partner for both clean‑up and long‑term planning
             </h2>
-            <p className="text-xs md:text-sm text-slate-600 max-w-xl">
+            <p className="text-xs md:text-sm text-slate-600 dark:text-slate-400 max-w-xl">
               Most investors come to WealthMax with scattered folios, missing documents, or
               unclaimed dividends. We help them first stabilise and recover, then design a
               portfolio that stays aligned with their life goals.
             </p>
           </div>
-          <div className="hidden md:flex items-center gap-2 rounded-2xl bg-slate-900 text-slate-50 px-5 py-4 shadow-lg">
-            <div className="flex flex-col text-xs text-slate-300">
+          <div className="hidden md:flex items-center gap-2 rounded-2xl bg-slate-900 dark:bg-slate-900/50 text-slate-50 dark:text-slate-200 px-5 py-4 shadow-lg">
+            <div className="flex flex-col text-xs text-slate-300 dark:text-slate-300">
               <span>Average client rating</span>
               <span className="text-2xl font-semibold text-amber-400">4.9 / 5</span>
             </div>
-            <div className="h-10 w-px bg-slate-700" />
-            <div className="text-xs text-slate-300">
+            <div className="h-10 w-px bg-slate-700 dark:bg-slate-700" />
+            <div className="text-xs text-slate-300 dark:text-slate-300">
               <p>Multi‑year relationships</p>
-              <p className="font-semibold text-slate-50">3+ years on average</p>
+              <p className="font-semibold text-slate-50 dark:text-slate-100">3+ years on average</p>
             </div>
           </div>
         </div>
 
         <div className="grid gap-4 md:grid-cols-3 text-xs md:text-sm">
-          <div className="rounded-2xl border border-slate-100 bg-slate-50/70 px-4 py-4 space-y-2">
-            <p className="font-semibold text-slate-900">Legacy & documentation</p>
-            <p className="text-slate-600">
+          <div className="rounded-2xl border border-slate-100 dark:border-slate-700 bg-slate-50/70 dark:bg-slate-700/30 px-4 py-4 space-y-2">
+            <p className="font-semibold text-slate-900 dark:text-slate-100">Legacy & documentation</p>
+            <p className="text-slate-600 dark:text-slate-300">
               Guidance on nominees, joint holdings, and paperwork so your investments can smoothly
               pass to the next generation.
             </p>
           </div>
-          <div className="rounded-2xl border border-slate-100 bg-slate-50/70 px-4 py-4 space-y-2">
-            <p className="font-semibold text-slate-900">Risk‑aligned portfolios</p>
-            <p className="text-slate-600">
+          <div className="rounded-2xl border border-slate-100 dark:border-slate-700 bg-slate-50/70 dark:bg-slate-700/30 px-4 py-4 space-y-2">
+            <p className="font-semibold text-slate-900 dark:text-slate-100">Risk‑aligned portfolios</p>
+            <p className="text-slate-600 dark:text-slate-300">
               Asset mix matched to your comfort level instead of chasing the highest returns at
               any cost.
             </p>
           </div>
-          <div className="rounded-2xl border border-slate-100 bg-slate-50/70 px-4 py-4 space-y-2">
-            <p className="font-semibold text-slate-900">Ongoing check‑ins</p>
-            <p className="text-slate-600">
+          <div className="rounded-2xl border border-slate-100 dark:border-slate-700 bg-slate-50/70 dark:bg-slate-700/30 px-4 py-4 space-y-2">
+            <p className="font-semibold text-slate-900 dark:text-slate-100">Ongoing check‑ins</p>
+            <p className="text-slate-600 dark:text-slate-300">
               Regular reviews to adjust for new goals, tax rules, or market changes while keeping
               you informed.
             </p>
@@ -296,13 +258,13 @@ export default function Home() {
       <motion.section
         id="contact"
         variants={fadeUp}
-        className="rounded-2xl bg-white/90 backdrop-blur shadow-sm border border-slate-200 px-6 py-6 md:px-8 md:py-7 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
+        className="rounded-2xl bg-white/90 dark:bg-slate-800/80 backdrop-blur shadow-sm border border-slate-200 dark:border-slate-700 px-6 py-6 md:px-8 md:py-7 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
       >
         <div>
-          <h3 className="text-base md:text-lg font-semibold text-slate-900">
+          <h3 className="text-base md:text-lg font-semibold text-slate-900 dark:text-slate-100">
             Ready to organise and grow your investments?
           </h3>
-          <p className="text-xs md:text-sm text-slate-600">
+          <p className="text-xs md:text-sm text-slate-600 dark:text-slate-400">
             Share a few details and the WealthMax team will reach out with next steps.
           </p>
         </div>

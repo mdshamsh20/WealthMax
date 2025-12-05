@@ -13,7 +13,7 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <div>
-      <h2 className="text-3xl font-bold text-center text-gray-900 mb-16">What Our Clients Say</h2>
+      <h2 className="text-3xl font-bold text-center text-slate-900 dark:text-slate-100 mb-16">What Our Clients Say</h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {testimonials.map((testimonial, index) => (
           <motion.div
@@ -21,14 +21,14 @@ export default function Testimonials() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: index * 0.1 }}
-            className="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300"
+            className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800/60 dark:to-slate-700/50 border border-blue-200 dark:border-slate-700 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300"
           >
             <div className="flex mb-4">
               {Array(5).fill(0).map((_, i) => (
                 <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
               ))}
             </div>
-            <p className="text-gray-800 leading-relaxed italic">"{testimonial}"</p>
+            <p className="text-slate-800 dark:text-slate-200 leading-relaxed italic">"{testimonial}"</p>
           </motion.div>
         ))}
       </div>
