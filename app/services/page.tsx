@@ -2,12 +2,7 @@
 
 import { motion, Variants } from 'framer-motion';
 import Link from 'next/link';
-import {
-  ShieldCheck,
-  FileText,
-  LineChart,
-  ArrowRight,
-} from 'lucide-react';
+import { ShieldCheck, FileText, ArrowRight, TrendingUp } from 'lucide-react';
 import Services from '@/components/Services';
 
 const fadeUp: Variants = {
@@ -76,8 +71,8 @@ export default function ServicesPage() {
         </div>
 
         <div className="flex items-start gap-3 rounded-2xl bg-white shadow-sm border border-slate-100 px-4 py-4">
-          <div className="rounded-xl bg-indigo-50 p-2">
-            <LineChart className="h-5 w-5 text-indigo-600" />
+            <div className="rounded-xl bg-indigo-50 p-2">
+            <TrendingUp className="h-5 w-5 text-indigo-600" />
           </div>
           <div>
             <p className="font-semibold text-slate-900">Growth & tax planning</p>
