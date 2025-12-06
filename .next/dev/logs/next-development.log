@@ -1,0 +1,16 @@
+[00:00:00.703] Server  LOG      ✓ Ready in 534ms
+[00:00:02.626] Browser ERROR   unhandledRejection: undefined
+[00:00:05.325] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:16.754] Browser WARN    Image with src "/team.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:01:56.331] Server  LOG      ✓ Compiled in 269ms
+[00:02:06.673] Server  LOG      ✓ Compiled in 115ms
+[00:02:13.483] Server  LOG      ✓ Compiled in 84ms
+[00:02:19.419] Server  LOG      ✓ Compiled in 121ms
+[00:02:28.572] Server  LOG      ✓ Compiled in 76ms
+[00:02:37.538] Server  LOG      ✓ Compiled in 122ms
+[00:02:47.614] Server  LOG      ✓ Compiled in 105ms
+[00:02:55.177] Server  LOG      ✓ Compiled in 123ms
+[00:02:59.197] Server  LOG      ✓ Compiled in 131ms
+[00:03:03.881] Server  LOG      ✓ Compiled in 100ms
+[00:03:16.007] Server  LOG      ✓ Compiled in 72ms
+[00:03:27.430] Browser WARN    Image with src "/team.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes

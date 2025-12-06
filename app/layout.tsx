@@ -19,11 +19,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className={inter.className}>
         <Navigation />
         {/* Global page wrapper */}
-        <main className="min-h-screen pt-24 pb-20 bg-slate-50">
+        <main className="min-h-screen pt-24 pb-20 bg-slate-950">
           <div className="max-w-6xl mx-auto px-4 md:px-6">
             {children}
           </div>

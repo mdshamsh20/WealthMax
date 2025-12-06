@@ -59,43 +59,43 @@ export default function Home() {
         variants={fadeUp}
         className="grid gap-6 md:grid-cols-3"
       >
-        <div className="flex items-start gap-3 rounded-2xl bg-white/90 dark:bg-slate-800/80 backdrop-blur shadow-sm border border-slate-100 dark:border-slate-700 px-4 py-4">
-          <div className="rounded-xl bg-sky-50 dark:bg-sky-900/30 p-2">
-            <ShieldCheck className="h-5 w-5 text-sky-600 dark:text-sky-300" />
+        <div className="flex items-start gap-3 rounded-2xl bg-slate-800/80 dark:bg-slate-800/80 backdrop-blur shadow-md border border-cyan-500/40 px-5 py-5">
+          <div className="rounded-xl bg-cyan-500/20 dark:bg-cyan-500/20 p-2.5 border border-cyan-400/30">
+            <ShieldCheck className="h-5 w-5 text-cyan-400 dark:text-cyan-300" />
           </div>
-          <div className="space-y-1">
-            <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+          <div className="space-y-1.5">
+            <h3 className="text-sm font-semibold text-white dark:text-white">
               Regulatory‑aware guidance
             </h3>
-            <p className="text-xs text-slate-600 dark:text-slate-300">
+            <p className="text-xs text-gray-200 dark:text-gray-200">
               Help with IEPF, transmission, and recovery of unclaimed investments with proper documentation.
             </p>
           </div>
         </div>
 
-        <div className="flex items-start gap-3 rounded-2xl bg-white/90 dark:bg-slate-800/80 backdrop-blur shadow-sm border border-slate-100 dark:border-slate-700 px-4 py-4">
-          <div className="rounded-xl bg-emerald-50 dark:bg-emerald-900/20 p-2">
-            <LineChart className="h-5 w-5 text-emerald-600 dark:text-emerald-300" />
+        <div className="flex items-start gap-3 rounded-2xl bg-slate-800/80 dark:bg-slate-800/80 backdrop-blur shadow-md border border-cyan-500/40 px-5 py-5">
+          <div className="rounded-xl bg-cyan-500/20 dark:bg-cyan-500/20 p-2.5 border border-cyan-400/30">
+            <LineChart className="h-5 w-5 text-cyan-400 dark:text-cyan-300" />
           </div>
-          <div className="space-y-1">
-            <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+          <div className="space-y-1.5">
+            <h3 className="text-sm font-semibold text-white dark:text-white">
               Goal‑based planning
             </h3>
-            <p className="text-xs text-slate-600 dark:text-slate-300">
+            <p className="text-xs text-gray-200 dark:text-gray-200">
               Portfolios aligned to major life goals instead of ad‑hoc product selection.
             </p>
           </div>
         </div>
 
-        <div className="flex items-start gap-3 rounded-2xl bg-white/90 dark:bg-slate-800/80 backdrop-blur shadow-sm border border-slate-100 dark:border-slate-700 px-4 py-4">
-          <div className="rounded-xl bg-indigo-50 dark:bg-indigo-900/25 p-2">
-            <Users className="h-5 w-5 text-indigo-600 dark:text-indigo-300" />
+        <div className="flex items-start gap-3 rounded-2xl bg-slate-800/80 dark:bg-slate-800/80 backdrop-blur shadow-md border border-cyan-500/40 px-5 py-5">
+          <div className="rounded-xl bg-cyan-500/20 dark:bg-cyan-500/20 p-2.5 border border-cyan-400/30">
+            <Users className="h-5 w-5 text-cyan-400 dark:text-cyan-300" />
           </div>
-          <div className="space-y-1">
-            <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+          <div className="space-y-1.5">
+            <h3 className="text-sm font-semibold text-white dark:text-white">
               White‑glove support
             </h3>
-            <p className="text-xs text-slate-600 dark:text-slate-300">
+            <p className="text-xs text-gray-200 dark:text-gray-200">
               High‑touch assistance for families managing multiple folios, nominees, and legacy holdings.
             </p>
           </div>
@@ -105,13 +105,13 @@ export default function Home() {
       {/* ABOUT SNIPPET */}
       <motion.section
         variants={fadeUp}
-        className="rounded-3xl bg-white/90 dark:bg-slate-800/80 backdrop-blur shadow-sm border border-slate-100 dark:border-slate-700 px-6 py-8 md:px-8 md:py-10 space-y-4"
+        className="rounded-3xl bg-gradient-to-r from-slate-800/80 to-slate-900/80 backdrop-blur shadow-lg border border-cyan-500/40 px-6 py-8 md:px-8 md:py-10 space-y-4"
       >
-        <h2 className="text-xl md:text-2xl font-semibold text-slate-900 dark:text-slate-100 flex items-center gap-2">
-          <CheckCircle2 className="h-5 w-5 text-emerald-500" />
+        <h2 className="text-xl md:text-2xl font-semibold text-white dark:text-white flex items-center gap-2">
+          <CheckCircle2 className="h-6 w-6 text-cyan-400" />
           Built for real‑life investors
         </h2>
-        <p className="text-sm md:text-base text-slate-700 dark:text-slate-300 leading-relaxed">
+        <p className="text-sm md:text-base text-gray-100 dark:text-gray-100 leading-relaxed">
           Wealthmax is not just a financial services company; we are a team of passionate experts
           who understand the intricate nuances of the financial landscape. Our collective
           expertise spans mutual funds, portfolio management schemes, life and general insurance,

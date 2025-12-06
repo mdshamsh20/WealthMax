@@ -40,12 +40,12 @@ export default function ThemeToggle() {
     <button
       onClick={toggle}
       aria-label="Toggle theme"
-      className="inline-flex items-center justify-center p-2.5 rounded-lg bg-white dark:bg-slate-800 shadow-md border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all duration-200"
+      className="inline-flex items-center justify-center p-2.5 rounded-lg bg-slate-800 dark:bg-slate-800 shadow-md border border-slate-700 dark:border-slate-700 hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-200"
     >
       {isDark ? (
-        <Sun className="h-5 w-5 text-amber-400 animate-spin" style={{ animationDuration: '3s' }} />
+        <Sun className="h-5 w-5 text-cyan-400 animate-spin" style={{ animationDuration: '3s' }} />
       ) : (
-        <Moon className="h-5 w-5 text-slate-600" />
+        <Moon className="h-5 w-5 text-cyan-400" />
       )}
     </button>
   );

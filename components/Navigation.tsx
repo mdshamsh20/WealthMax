@@ -16,10 +16,10 @@ export default function Navigation() {
 
 
   return (
-    <nav className="fixed top-0 w-full bg-white dark:bg-slate-900 shadow-lg z-50">
+    <nav className="fixed top-0 w-full bg-slate-900/95 dark:bg-slate-950/95 backdrop-blur-md border-b border-slate-800/50 shadow-lg z-50">
       <div className="max-w-6xl mx-auto px-6 md:px-12 py-4">
         <div className="flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold text-blue-600 dark:text-amber-300">
+          <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-cyan-300 bg-clip-text text-transparent dark:from-cyan-300 dark:to-cyan-200">
             WealthMax
           </Link>
           
@@ -30,7 +30,7 @@ export default function Navigation() {
               <li key={link.href}>
                 <Link 
                   href={link.href}
-                  className="text-gray-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-amber-300 font-medium transition-colors"
+                  className="text-white hover:text-cyan-300 font-medium transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -60,7 +60,7 @@ export default function Navigation() {
                 <li key={link.href}>
                   <Link 
                     href={link.href}
-                    className="block text-gray-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-amber-300 font-medium"
+                    className="block text-white hover:text-cyan-300 font-medium"
                     onClick={() => setIsOpen(false)}
                   >
                     {link.label}

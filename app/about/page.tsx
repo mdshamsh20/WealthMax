@@ -43,7 +43,7 @@ export default function AboutPage() {
         variants={fadeUp}
         className="grid gap-8 md:grid-cols-[1.2fr,1fr] items-start"
       >
-        <div className="space-y-4 text-sm md:text-base text-slate-700 leading-relaxed">
+        <div className="space-y-4 text-sm md:text-base text-gray-100 leading-relaxed">
           <p>
             Our expertise covers mutual funds, portfolio management schemes, life and general
             insurance, fixed deposits, bonds, and the recovery of unclaimed investments. We help
@@ -70,9 +70,9 @@ export default function AboutPage() {
             className="object-cover"
             priority
           />
-          <div className="absolute bottom-3 left-3 right-3 rounded-2xl bg-slate-950/70 text-slate-100 px-3 py-2 text-xs md:text-sm">
+          <div className="absolute bottom-3 left-3 right-3 rounded-2xl bg-slate-950/80 backdrop-blur text-white px-4 py-3 text-xs md:text-sm border border-cyan-500/30">
             <p className="font-semibold">A collaborative team you can talk to</p>
-            <p className="text-slate-300">
+            <p className="text-gray-300">
               Advisors, operations, and documentation specialists working together on every case.
             </p>
           </div>
@@ -82,10 +82,9 @@ export default function AboutPage() {
       {/* HIGHLIGHT CARD */}
       <motion.section
         variants={fadeUp}
-        className="rounded-3xl bg-blue-50 border border-blue-100 px-6 py-6 md:px-8 md:py-7 text-sm md:text-base text-blue-900 shadow-sm"
+        className="rounded-3xl bg-gradient-to-r from-slate-800/80 to-slate-900/80 backdrop-blur shadow-lg border border-cyan-500/40 px-6 py-8 md:px-8 md:py-9 text-sm md:text-base text-white"
       >
-        Our vision is to be the premier financial services firm for investors seeking professional
-        support in managing and recovering their wealth with confidence.
+        <span className="inline-block mb-2">🎯</span> Our vision is to be the premier financial services firm for investors seeking professional support in managing and recovering their wealth with confidence.
       </motion.section>
 
       {/* VALUES STRIP WITH ICONS */}
@@ -93,37 +92,37 @@ export default function AboutPage() {
         variants={fadeUp}
         className="grid gap-4 md:grid-cols-3 text-xs md:text-sm"
       >
-        <div className="flex items-start gap-3 rounded-2xl bg-white shadow-sm border border-slate-100 px-4 py-4">
-          <div className="rounded-xl bg-sky-50 p-2">
-            <ShieldCheck className="h-5 w-5 text-sky-600" />
+        <div className="flex items-start gap-3 rounded-2xl bg-slate-800/80 backdrop-blur shadow-md border border-cyan-500/40 px-5 py-5">
+          <div className="rounded-xl bg-cyan-500/20 p-3 border border-cyan-400/30">
+            <ShieldCheck className="h-5 w-5 text-cyan-400" />
           </div>
           <div>
-            <p className="font-semibold text-slate-900">Integrity first</p>
-            <p className="text-slate-600">
+            <p className="font-semibold text-white">Integrity first</p>
+            <p className="text-gray-200">
               Transparent processes and honest communication, even when it means asking you not to invest.
             </p>
           </div>
         </div>
 
-        <div className="flex items-start gap-3 rounded-2xl bg-white shadow-sm border border-slate-100 px-4 py-4">
-          <div className="rounded-xl bg-emerald-50 p-2">
-            <LineChart className="h-5 w-5 text-emerald-600" />
+        <div className="flex items-start gap-3 rounded-2xl bg-slate-800/80 backdrop-blur shadow-md border border-cyan-500/40 px-5 py-5">
+          <div className="rounded-xl bg-cyan-500/20 p-3 border border-cyan-400/30">
+            <LineChart className="h-5 w-5 text-cyan-400" />
           </div>
           <div>
-            <p className="font-semibold text-slate-900">Goal‑driven advice</p>
-            <p className="text-slate-600">
+            <p className="font-semibold text-white">Goal‑driven advice</p>
+            <p className="text-gray-200">
               Portfolios built around education, retirement, and wealth‑creation milestones.
             </p>
           </div>
         </div>
 
-        <div className="flex items-start gap-3 rounded-2xl bg-white shadow-sm border border-slate-100 px-4 py-4">
-          <div className="rounded-xl bg-indigo-50 p-2">
-            <Users className="h-5 w-5 text-indigo-600" />
+        <div className="flex items-start gap-3 rounded-2xl bg-slate-800/80 backdrop-blur shadow-md border border-cyan-500/40 px-5 py-5">
+          <div className="rounded-xl bg-cyan-500/20 p-3 border border-cyan-400/30">
+            <Users className="h-5 w-5 text-cyan-400" />
           </div>
           <div>
-            <p className="font-semibold text-slate-900">Long‑term relationships</p>
-            <p className="text-slate-600">
+            <p className="font-semibold text-white">Long‑term relationships</p>
+            <p className="text-gray-200">
               Multi‑year partnerships with families who see us as their first call for financial decisions.
             </p>
           </div>

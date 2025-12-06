@@ -46,37 +46,37 @@ export default function ServicesPage() {
         variants={fadeUp}
         className="grid gap-4 md:grid-cols-3 text-xs md:text-sm"
       >
-        <div className="flex items-start gap-3 rounded-2xl bg-white shadow-sm border border-slate-100 px-4 py-4">
-          <div className="rounded-xl bg-sky-50 p-2">
-            <ShieldCheck className="h-5 w-5 text-sky-600" />
+        <div className="flex items-start gap-3 rounded-2xl bg-slate-800/80 backdrop-blur shadow-md border border-cyan-500/40 px-5 py-5">
+          <div className="rounded-xl bg-cyan-500/20 p-3 border border-cyan-400/30">
+            <ShieldCheck className="h-5 w-5 text-cyan-400" />
           </div>
           <div>
-            <p className="font-semibold text-slate-900">Transmission & recovery</p>
-            <p className="text-slate-600">
+            <p className="font-semibold text-white">Transmission & recovery</p>
+            <p className="text-gray-200">
               Transmission of investments, transfer of shares, and recovery of unclaimed dividends or deposits.
             </p>
           </div>
         </div>
 
-        <div className="flex items-start gap-3 rounded-2xl bg-white shadow-sm border border-slate-100 px-4 py-4">
-          <div className="rounded-xl bg-emerald-50 p-2">
-            <FileText className="h-5 w-5 text-emerald-600" />
+        <div className="flex items-start gap-3 rounded-2xl bg-slate-800/80 backdrop-blur shadow-md border border-cyan-500/40 px-5 py-5">
+          <div className="rounded-xl bg-cyan-500/20 p-3 border border-cyan-400/30">
+            <FileText className="h-5 w-5 text-cyan-400" />
           </div>
           <div>
-            <p className="font-semibold text-slate-900">Protection & insurance</p>
-            <p className="text-slate-600">
+            <p className="font-semibold text-white">Protection & insurance</p>
+            <p className="text-gray-200">
               Adequate life insurance and general insurance advice tailored to your family&apos;s needs.
             </p>
           </div>
         </div>
 
-        <div className="flex items-start gap-3 rounded-2xl bg-white shadow-sm border border-slate-100 px-4 py-4">
-            <div className="rounded-xl bg-indigo-50 p-2">
-            <TrendingUp className="h-5 w-5 text-indigo-600" />
+        <div className="flex items-start gap-3 rounded-2xl bg-slate-800/80 backdrop-blur shadow-md border border-cyan-500/40 px-5 py-5">
+            <div className="rounded-xl bg-cyan-500/20 p-3 border border-cyan-400/30">
+            <TrendingUp className="h-5 w-5 text-cyan-400" />
           </div>
           <div>
-            <p className="font-semibold text-slate-900">Growth & tax planning</p>
-            <p className="text-slate-600">
+            <p className="font-semibold text-white">Growth & tax planning</p>
+            <p className="text-gray-200">
               Mutual funds, fixed deposits, and tax‑efficient strategies for long‑term wealth creation.
             </p>
           </div>
